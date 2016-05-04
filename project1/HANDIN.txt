@@ -1,0 +1,61 @@
+Student Name #1: Lorenzo De Bernardini
+Student ugrad login #1: d5o0b
+
+Student Name #2: Baldeep Dhaliwal
+Student ugrad login #2: h4o0b
+
+Team name (for fun!): CLASSIC CCXXI
+
+Acknowledgment that you understand and have followed the course's
+collaboration policy
+(http://www.ugrad.cs.ubc.ca/~cs221/current/syllabus.shtml#conduct):
+
+TODO: Lorenzo De Bernardini, Baldeep Dhaliwal
+
+TODO: submit using: make handin-proj1
+
+-----------------------------------------------------------------
+
+Approximate hours on project: Around 4 hours each.
+
+-----------------------------------------------------------------
+
+For teams, rough breakdown of work: 50/50.
+
+-----------------------------------------------------------------
+
+Acknowledgment of assistance: We helped each other when needed. No assistance came from outside of our team.
+
+-----------------------------------------------------------------
+
+Questions:
+
+For the explanations, generally a sentence or two should be enough. Type your answers directly in this file.
+
+1.  Edit solve.cpp to use either of your queue classes to solve Mazes 1, 2, 3, and 4. Set a large enough delay in the solveMaze function(like 200000) to watch what's happening. 
+Do you see why this is called breadth-first search (BFS)? 
+How many steps long were your solutions? How does this compare with DFS?
+
+ANSWER: Yes, we do. Using LinkedListQueue, the solution for Maze 1 was 58 steps long, the solution for Maze 2 was 14 steps long, the solution for Maze 3 was 5 steps long, the solution for Maze 4 was 90 steps long. Comparing this results to the DFS ones, we notice that we obtained the same result for Maze 1 and better solutions for Maze 2, 3, and 4.
+
+2.  Try to solve the blank Sudoku board using your ArrayQueue
+and LinkedListQueue classes. What happens? Why?
+
+ANSWER: When trying to solve the empty sudoku, the program checks every single possible combination. Because of this, the program seems to never end, even though it will eventually find a solution.
+
+3.  Switch to the medium-difficulty Sudoku problem, and comment
+out the delay and the print statements in the solveMaze function.
+How long does it take to solve the puzzle using your ArrayQueue
+class? Using your LinkedListQueue class? Is the difference big?
+
+ANSWER: Our LinkedListQueue took 54.654 s to solve the puzzle, while our ArrayQueue took 53.326 s. The difference between them is slightly more than a second, and we wouldn't consider that a big difference.
+
+4.  Edit solve.cpp to switch to the 4x4 and then 5x5 slider puzzles. Make sure to comment out the delay and print statements in the solveMaze function. 
+How long does it take to solve these puzzles with your HeapPriorityQueue versus my UnsortedPriorityQueue? 
+For most students, mine will be faster?  Why might that happen?  Are the asymptotic runtimes for the heap versus the unsorted array wrong?
+
+ANSWER: Our HeapPriorityQueue took 0.620 s to solve the puzzle, while your UnsortedPriorityQueue took 4.350 s. This goes along with our expectations, as while your implementation of UnsortedPriorityQueue wastes time looking for the highest priority element in the array, our implementation of HeapPriorityQueue always has the highest priority element at index 0.
+
+-----------------------------------------------------------------
+
+We will be checking your implementations of ArrayQueue, LinkedListQueue, and HeapPriorityQueue.
